@@ -1,4 +1,4 @@
-export interface Options{
+ interface Options{
 
   /**
    * 打开移除console
@@ -13,3 +13,5 @@ export interface Options{
   include?: string[],
      
 }
+
+export {Options}
