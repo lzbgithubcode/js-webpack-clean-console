@@ -1,20 +1,20 @@
-// 定义插件名称
+// define plug-in name
 const pluginName = "webpack-remove-console-plugin";
 
-// 定义方法名
+// define methods
 const consoleName = ["console", "window.console"];
 
-// 默认配置
+// default config
 const defaultOptions = {
   /**
-   * 打开移除console
-   *  默认true
+   *  Whether or not open console
+   *  default true
    */
   openRemoveConsole: true,
 
   /**
-   * 包含移除的打印信息
-   *  默认log
+   * Contains the console method you want to remove
+   *  default log
    */
   include: ["log"],
 };
@@ -27,14 +27,14 @@ class WebpackRemoveConsolePlugin {
       );
     }
 
-    // 是否移除
+    // Whether to remove
     this.openRemoveConsole =
       options.openRemoveConsole == true || options.openRemoveConsole == false
         ? options.openRemoveConsole
         : true;
 
-    // 是否包含
-    this.include = defaultOptions.include; // 默认清楚log
+    // Contains the console method you want to remove
+    this.include = defaultOptions.include;
 
     if (options && options.include) {
       if (!Array.isArray(options.include)) {
@@ -43,13 +43,13 @@ class WebpackRemoveConsolePlugin {
         );
       }
 
-      // 包括 * 表示所有
+      // If it includes *, it's everything
       if (options.include.includes("*")) {
         this.include = Object.keys(console).filter(
           (key) => typeof console[key] == "function"
         );
       } else {
-        // 直接传入值覆盖
+        // If there is input, the value is passed directly to override
         this.include = options.include;
       }
     }
@@ -60,26 +60,25 @@ class WebpackRemoveConsolePlugin {
 
     const that = this;
     const handlerAssets = (assets, compilation) => {
-      // 定义 需要请求的对象
       Object.entries(assets).forEach((item) => {
         const fileName = item[0];
         const cacheSource = item[1];
-        // 匹配js文件
+        // Matching js files
         if (/\.js$/.test(fileName)) {
           let sourceCode = cacheSource.source();
           const map = cacheSource.map();
 
-          // 匹配console.[log, 'info'...]
+          // Matching console.[log, 'info'...]
           const regExp = new RegExp(
             `(${consoleName.join("|")}).(?:${that.include.join(
               "|"
             )})\s{0,}\(.*?\)`,
             "g"
           );
-          // 清楚日志
+          // clear console
           sourceCode = sourceCode.replace(regExp, "");
 
-          // 重组code对象
+          // restructuring code
           compilation.assets[fileName] = {
             source: () => {
               return sourceCode;
@@ -98,9 +97,9 @@ class WebpackRemoveConsolePlugin {
       });
     };
 
-    //监听事件  - compilation 创建之后执行
+    //Listen for an event  - Execute after compilation creation
     hooks.compilation.tap({ name: pluginName }, (compilation) => {
-      // 暂时没有好的方法区分webpack4/5 - 只能通过弃用方法来判断
+      // There is currently no good way to differentiate webpack4/5 - only by deprecating methods
       if (compilation.hooks.processAssets) {
         // webpack 5
         compilation.hooks.processAssets.tap({ name: pluginName }, (assets) => {

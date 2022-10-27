@@ -1,17 +1,23 @@
 {
-  "name": "js-webpack-remove-console",
-  "version": "1.0.0",
+  "name": "webpack-clean-console-plugin",
+  "version": "0.0.1",
   "main": "/src/index.js",
   "author": "lzb",
   "license": "MIT",
-  "peerDependencies": {
-    "webpack": ">=4.0.0 <6.0.0"
+  "engines": {
+    "node": ">=12.0.0"
   },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "console",
+    "node"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/lzbgithubcode/ts-webpack-remove-console.git"
+    "url": "https://github.com/lzbgithubcode/js-webpack-clean-console.git"
   },
   "bugs": {
-    "url": "https://github.com/johnagan/clean-webpack-plugin/issues"
+    "url": "https://github.com/lzbgithubcode/js-webpack-clean-console/issues"
   }
 }
