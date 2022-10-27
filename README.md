@@ -40,8 +40,7 @@ module.exports = {
 
 #### Options
 
-| option  | description                                          | default   | options                                                    |
-| ------- | ---------------------------------------------------- | --------- | ---------------------------------------------------------- |
-| include | An array of console methods that you want to remove. | `['log']` | all `["*"]` or `['log', 'info','error','warn','debug']...` |
-
-| openRemoveConsole | Whether or not open console | true | `true`、 `false`|
+| option            | description                                          | default   | options                                                    |
+| ----------------- | ---------------------------------------------------- | --------- | ---------------------------------------------------------- |
+| include           | An array of console methods that you want to remove. | `['log']` | all `["*"]` or `['log', 'info','error','warn','debug']...` |
+| openRemoveConsole | Whether or not open console                          | true      | `true`、 `false`                                           |
