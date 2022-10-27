@@ -6,7 +6,7 @@ A lightweight webpack plug-in for `console` remove, small and dependency free (o
 
 - support `webpack4.x`与`webpack5.x`
 
-- small volume
+- small volume(1.6kb)
 
 - Without dependency
 
