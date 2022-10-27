@@ -1,7 +1,7 @@
 {
   "name": "webpack-clean-console-plugin",
   "version": "0.0.2",
-  "main": "/src/index.js",
+  "main": "index.js",
   "author": "lzb",
   "license": "MIT",
   "engines": {
