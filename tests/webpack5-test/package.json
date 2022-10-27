@@ -1,0 +1,16 @@
+{
+  "name": "webpack5-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf build",
+    "test": "yarn clean && yarn test:webpack5",
+    "test:webpack5": "webpack --progress --profile --color --config webpack.config.js"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
