@@ -1,5 +1,5 @@
 // define plug-in name
-const pluginName = "webpack-remove-console-plugin";
+const pluginName = "webpack-clean-console-plugin";
 
 // define methods
 const consoleName = ["console", "window.console"];
@@ -19,7 +19,7 @@ const defaultOptions = {
   include: ["log"],
 };
 
-class WebpackRemoveConsolePlugin {
+class WebpackCleanConsolePlugin {
   constructor(options = defaultOptions) {
     if (!this.isPlainObject(options)) {
       throw new Error(
@@ -125,4 +125,4 @@ class WebpackRemoveConsolePlugin {
   }
 }
 
-module.exports = WebpackRemoveConsolePlugin;
+module.exports = WebpackCleanConsolePlugin;

@@ -1,4 +1,4 @@
-#### js-webpack-remove-console Introduction
+#### webpack-clean-console-plugin Introduction
 
 A lightweight webpack plug-in for `console` remove, small and dependency free (only one file), supports both `webpack4.x` and `webpack5.x`
 
@@ -14,6 +14,7 @@ A lightweight webpack plug-in for `console` remove, small and dependency free (o
 
 ```sh
  npm install webpack-clean-console-plugin --save-dev
+ yarn  add  webpack-clean-console-plugin --dev
 ```
 
 #### Usage

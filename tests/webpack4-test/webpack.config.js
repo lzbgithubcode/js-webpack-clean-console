@@ -1,5 +1,6 @@
 const path = require("path");
-const WebpackRemoveConsolePlugin = require("../../src/index");
+const WebpackCleanConsolePlugin = require("../../src/index");
+// const WebpackRemoveConsolePlugin = require("webpack-clean-console-plugin");
 
 module.exports = {
   // mode: "development",
@@ -13,6 +14,6 @@ module.exports = {
   },
   plugins: [
     // Try various defaults and options.
-    new WebpackRemoveConsolePlugin({ include: ["log"] }),
+    new WebpackCleanConsolePlugin({ include: ["log"] }),
   ],
 };
