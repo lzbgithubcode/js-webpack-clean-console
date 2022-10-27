@@ -11,6 +11,7 @@
   "devDependencies": {
     "rimraf": "^3.0.2",
     "webpack": "^5.74.0",
+    "webpack-clean-console-plugin": "^0.0.3",
     "webpack-cli": "^4.10.0"
   }
 }

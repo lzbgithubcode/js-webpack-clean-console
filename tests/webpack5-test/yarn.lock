@@ -796,6 +796,11 @@ watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
+webpack-clean-console-plugin@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/webpack-clean-console-plugin/-/webpack-clean-console-plugin-0.0.3.tgz#4817fcd76584f306106154ada7396367a92543d0"
+  integrity sha512-aX1JHrppl0+dtDZq2wzozOxsUYcY615LwMVmwWvvuB8/h5gO/2g+lrF6l6tKqmV1+RPWh2f5h5R0LBp+pbK6Nw==
+
 webpack-cli@^4.10.0:
   version "4.10.0"
   resolved "http://registry.npm.tb.com:80/webpack-cli/-/webpack-cli-4.10.0.tgz#37c1d69c8d85214c5a65e589378f53aec64dab31"

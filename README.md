@@ -19,6 +19,29 @@ A lightweight webpack plug-in for `console` remove, small and dependency free (o
 
 #### Usage
 
-```js
+```javascript
+// webpack.config.js
+const WebpackCleanConsolePlugin = require("webpack-clean-console-plugin");
 
+// case 1  include method
+module.exports = {
+  // ...other code
+  plugins: [new WebpackCleanConsolePlugin({ include: ["log", "info"] })],
+};
+
+// case 2 all console method
+module.exports = {
+  // ...other code
+  plugins: [new WebpackCleanConsolePlugin({ include: ["*"] })],
+};
 ```
+
+**More webpack4/5 example reference `tests/webpack4-test`、`tests/webpack5-test`**
+
+#### Options
+
+| option  | description                                          | default   | options                                                    |
+| ------- | ---------------------------------------------------- | --------- | ---------------------------------------------------------- |
+| include | An array of console methods that you want to remove. | `['log']` | all `["*"]` or `['log', 'info','error','warn','debug']...` |
+
+| openRemoveConsole | Whether or not open console | true | `true`、 `false`|

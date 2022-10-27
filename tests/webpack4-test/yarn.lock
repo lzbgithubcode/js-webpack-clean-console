@@ -2448,10 +2448,10 @@ watchpack@^1.7.4:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
 
-webpack-clean-console-plugin@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-clean-console-plugin/-/webpack-clean-console-plugin-0.0.2.tgz#ca3e7d0799cc7ea382878f93512887fbc12bd961"
-  integrity sha512-VYgXtuJH7UHWKNgpG3UdXywFjUEN+vDTa/mED+e+t6BVvjuaA8be3dqCrSDWZ2cfM16KNUuT9Esk8grw7rEvYA==
+webpack-clean-console-plugin@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/webpack-clean-console-plugin/-/webpack-clean-console-plugin-0.0.3.tgz#4817fcd76584f306106154ada7396367a92543d0"
+  integrity sha512-aX1JHrppl0+dtDZq2wzozOxsUYcY615LwMVmwWvvuB8/h5gO/2g+lrF6l6tKqmV1+RPWh2f5h5R0LBp+pbK6Nw==
 
 webpack-cli@^4.10.0:
   version "4.10.0"
