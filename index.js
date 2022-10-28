@@ -60,9 +60,7 @@ class WebpackCleanConsolePlugin {
 
     const that = this;
     const handlerAssets = (assets, compilation) => {
-      Object.entries(assets).forEach((item) => {
-        const fileName = item[0];
-        const cacheSource = item[1];
+      Object.entries(assets).forEach(([fileName, cacheSource]) => {
         // Matching js files
         if (/\.js$/.test(fileName)) {
           let sourceCode = cacheSource.source();
@@ -72,11 +70,11 @@ class WebpackCleanConsolePlugin {
           const regExp = new RegExp(
             `(${consoleName.join("|")}).(?:${that.include.join(
               "|"
-            )})\s{0,}\(.*?\)`,
+            )})\\(.*?\\)+`,
             "g"
           );
           // clear console
-          sourceCode = sourceCode.replace(regExp, "");
+          sourceCode = sourceCode.replace(regExp, " ");
 
           // restructuring code
           compilation.assets[fileName] = {
