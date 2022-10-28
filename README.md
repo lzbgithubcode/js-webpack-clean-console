@@ -2,6 +2,10 @@
 
 A lightweight webpack plug-in for `console` remove, small and dependency free (only one file), supports both `webpack4.x` and `webpack5.x`
 
+#### attention
+*  **The webpack plug-in uses regular expressions to remove console logs, which is simple but inaccurate**
+*  **If you need to remove the console accurately, use the babel plug-in [remove-console-babel-plugin](https://www.npmjs.com/package/remove-console-babel-plugin)**
+* **[remove-console-babel-plugin](https://www.npmjs.com/package/remove-console-babel-plugin)  processed by the AST**
 #### advantages
 
 - support `webpack4.x`与`webpack5.x`
